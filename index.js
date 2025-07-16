@@ -15,7 +15,8 @@ const fetchUsers = async () => {
     console.log("Fetching first five users", firstFiveUsers);
 
     // Call fetchPost and pass first 5 users to fetch and group their posts
-    fetchPost(firstFiveUsers);
+    // To work on: Await the results
+    await fetchPost(firstFiveUsers);
   } catch (error) {
     console.log("Error fetching users", error);
   }
@@ -35,11 +36,6 @@ const fetchPost = async (firstFiveUsers) => {
 
     // Filter all posts in order to keep posts written by first 5 users
     const filteredPosts = post.filter((post) => userIds.includes(post.userId));
-
-    // filteredPosts.map((post) => {
-    //   const author = firstFiveUsers.find((user) => user.id === post.userId);
-    //   console.log(`Author: ${author.name}, Title: ${post.title}`);
-    // });
 
     // To go through each of the 5 users one by one
     firstFiveUsers.forEach((user) => {
