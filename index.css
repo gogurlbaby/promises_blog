@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page */
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+  line-height: 1.6;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.3rem;
+  color: #1e1e1e;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Blog Layout */
+#blog {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Author Card */
+.author {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: 0.3s ease;
+}
+
+.author:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.author h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #005fa3;
+  border-left: 4px solid #0077cc;
+  padding-left: 0.6rem;
+}
+
+/* Post List */
+.author ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.author li {
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Title */
+.author li .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0077cc;
+  margin-bottom: 0.3rem;
+  display: inline-block;
+}
+
+.author li .title:hover {
+  text-decoration: underline;
+}
+
+/* Body */
+.author li .preview {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0.3rem 0;
+  opacity: 0.9;
+}
+
+/* Comments Header */
+.author li p {
+  margin: 0.4rem 0 0.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Comments */
+.comment-list {
+  margin-top: 0.3rem;
+  padding-left: 1rem;
+  border-left: 2px solid #ddd;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.comment-list li {
+  font-size: 0.85rem;
+  color: #555;
+  background: #f8f8f8;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 0.3rem;
+  border-radius: 5px;
+}
+
+/* Pagination Container */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Pagination Buttons */
+.pagination button {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.pagination button:hover {
+  background-color: #0077cc;
+  color: #fff;
+  border-color: #0077cc;
+}
+
+/* Active Page Button */
+.pagination button.active {
+  background-color: #0077cc;
+  color: #fff;
+  font-weight: bold;
+  border-color: #0077cc;
+}
